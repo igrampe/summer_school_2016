@@ -51,7 +51,6 @@
     song.title = title;
     song.artistName = artistName;
     [playlist addSongsObject:song];
-    song.playlist = playlist;
     [self saveContext];
 }
 
@@ -81,7 +80,7 @@
         return _persistentStoreCoordinator;
     }
     
-    _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+    _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Task_Core_Data.sqlite"];
     NSError *error = nil;
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
@@ -89,6 +88,7 @@
                                                              URL:storeURL
                                                          options:nil
                                                            error:&error]) {
+        NSLog(@"%@", error.localizedDescription);
         abort();
     }
     
@@ -100,7 +100,7 @@
         return _managedObjectContext;
     }
     
-    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
+    NSPersistentStoreCoordinator *coordinator = self.persistentStoreCoordinator;
     if (!coordinator) {
         return nil;
     }
@@ -114,6 +114,7 @@
     if (managedObjectContext != nil) {
         NSError *error = nil;
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
+            NSLog(@"%@", error.localizedDescription);
             abort();
         }
     }

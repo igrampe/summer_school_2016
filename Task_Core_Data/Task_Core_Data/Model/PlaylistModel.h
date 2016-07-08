@@ -7,13 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
 @class SongModel;
 
-@interface PlaylistModel : NSObject
+NS_ASSUME_NONNULL_BEGIN
 
-@property NSData *imageData;
-@property NSString *title;
-@property NSSet<SongModel *> *songs;
+@interface PlaylistModel : NSManagedObject
+
+// Insert code here to declare functionality of your managed object subclass
 
 @end
+
+NS_ASSUME_NONNULL_END
+
+#import "PlaylistModel+CoreDataProperties.h"

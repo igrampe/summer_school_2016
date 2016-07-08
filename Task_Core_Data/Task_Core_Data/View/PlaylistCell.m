@@ -7,6 +7,7 @@
 //
 
 #import "PlaylistCell.h"
+#import "PlaylistModel.h"
 
 @interface PlaylistCell ()
 
@@ -18,7 +19,8 @@
 @implementation PlaylistCell
 
 - (void)configureWithPlaylist:(PlaylistModel *)playlist {
-    
+    self.titleLabel.text = playlist.title;
+    self.coverImageView.image = [UIImage imageWithData:playlist.imageData];
 }
 
 @end

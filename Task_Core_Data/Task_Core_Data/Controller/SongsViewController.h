@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @class PlaylistModel;
+@class DataBaseManager;
 
 @interface SongsViewController : UITableViewController
 
+@property (nonatomic, strong) DataBaseManager *dataBaseManager;
 @property (nonatomic, strong) PlaylistModel *playlist;
 
 @end

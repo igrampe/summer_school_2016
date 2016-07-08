@@ -8,6 +8,7 @@
 
 #import "AddPlaylistViewController.h"
 #import "CoverPickerViewController.h"
+#import "DataBaseManager.h"
 
 @interface AddPlaylistViewController ()
 
@@ -28,8 +29,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if (sender == self.cancelButtonItem) {
         return;
+    } else if (sender == self.saveButtonItem) {
+        [self save];
     }
-    [self save];
 }
 
 - (IBAction)unwind:(UIStoryboardSegue *)sender {
@@ -42,7 +44,11 @@
 #pragma mark - Logic
 
 - (void)save {
-    
+    NSData *imageData = nil;
+    if (self.coverImageView.image) {
+        imageData = UIImageJPEGRepresentation(self.coverImageView.image, 100);
+    }
+    [self.dataBaseManager addPlaylistWithTitle:self.titleField.text imageData:imageData];
 }
 
 @end

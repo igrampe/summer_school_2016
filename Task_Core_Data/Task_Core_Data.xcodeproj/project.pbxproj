@@ -19,8 +19,6 @@
 		5321E9391D2EEF1100327249 /* Task_Core_Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5321E9371D2EEF1100327249 /* Task_Core_Data.xcdatamodeld */; };
 		5321E93C1D2EF0B600327249 /* AddSongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5321E93B1D2EF0B600327249 /* AddSongViewController.m */; };
 		5321E93F1D2EF0CA00327249 /* AddPlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5321E93E1D2EF0CA00327249 /* AddPlaylistViewController.m */; };
-		5321E9451D2F04B200327249 /* PlaylistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5321E9441D2F04B200327249 /* PlaylistModel.m */; };
-		5321E9481D2F04BA00327249 /* SongModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5321E9471D2F04BA00327249 /* SongModel.m */; };
 		5321E97C1D2F0E6E00327249 /* cover_00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5321E94A1D2F0E6E00327249 /* cover_00.jpg */; };
 		5321E97D1D2F0E6E00327249 /* cover_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5321E94B1D2F0E6E00327249 /* cover_01.jpg */; };
 		5321E97E1D2F0E6E00327249 /* cover_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5321E94C1D2F0E6E00327249 /* cover_02.jpg */; };
@@ -73,6 +71,11 @@
 		5321E9AD1D2F0E6E00327249 /* cover_49.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5321E97B1D2F0E6E00327249 /* cover_49.jpg */; };
 		5321E9B01D2F0E8700327249 /* CoverPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5321E9AF1D2F0E8700327249 /* CoverPickerViewController.m */; };
 		5321E9B31D2F0FA000327249 /* CoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5321E9B21D2F0FA000327249 /* CoverCell.m */; };
+		5321E9D41D2F591B00327249 /* SongModel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5321E9CD1D2F591B00327249 /* SongModel+CoreDataProperties.m */; };
+		5321E9D51D2F591B00327249 /* SongModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5321E9CF1D2F591B00327249 /* SongModel.m */; };
+		5321E9D61D2F591B00327249 /* PlaylistModel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5321E9D11D2F591B00327249 /* PlaylistModel+CoreDataProperties.m */; };
+		5321E9D71D2F591B00327249 /* PlaylistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5321E9D31D2F591B00327249 /* PlaylistModel.m */; };
+		5321EA001D2F598300327249 /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5321E9FF1D2F598300327249 /* DataBaseManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,10 +100,6 @@
 		5321E93B1D2EF0B600327249 /* AddSongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSongViewController.m; sourceTree = "<group>"; };
 		5321E93D1D2EF0CA00327249 /* AddPlaylistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPlaylistViewController.h; sourceTree = "<group>"; };
 		5321E93E1D2EF0CA00327249 /* AddPlaylistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPlaylistViewController.m; sourceTree = "<group>"; };
-		5321E9431D2F04B200327249 /* PlaylistModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistModel.h; sourceTree = "<group>"; };
-		5321E9441D2F04B200327249 /* PlaylistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistModel.m; sourceTree = "<group>"; };
-		5321E9461D2F04BA00327249 /* SongModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongModel.h; sourceTree = "<group>"; };
-		5321E9471D2F04BA00327249 /* SongModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongModel.m; sourceTree = "<group>"; };
 		5321E94A1D2F0E6E00327249 /* cover_00.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cover_00.jpg; sourceTree = "<group>"; };
 		5321E94B1D2F0E6E00327249 /* cover_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cover_01.jpg; sourceTree = "<group>"; };
 		5321E94C1D2F0E6E00327249 /* cover_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cover_02.jpg; sourceTree = "<group>"; };
@@ -155,6 +154,16 @@
 		5321E9AF1D2F0E8700327249 /* CoverPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverPickerViewController.m; sourceTree = "<group>"; };
 		5321E9B11D2F0FA000327249 /* CoverCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverCell.h; sourceTree = "<group>"; };
 		5321E9B21D2F0FA000327249 /* CoverCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverCell.m; sourceTree = "<group>"; };
+		5321E9CC1D2F591B00327249 /* SongModel+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SongModel+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5321E9CD1D2F591B00327249 /* SongModel+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SongModel+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5321E9CE1D2F591B00327249 /* SongModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongModel.h; sourceTree = "<group>"; };
+		5321E9CF1D2F591B00327249 /* SongModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongModel.m; sourceTree = "<group>"; };
+		5321E9D01D2F591B00327249 /* PlaylistModel+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PlaylistModel+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5321E9D11D2F591B00327249 /* PlaylistModel+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PlaylistModel+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5321E9D21D2F591B00327249 /* PlaylistModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistModel.h; sourceTree = "<group>"; };
+		5321E9D31D2F591B00327249 /* PlaylistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistModel.m; sourceTree = "<group>"; };
+		5321E9FE1D2F598300327249 /* DataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseManager.h; sourceTree = "<group>"; };
+		5321E9FF1D2F598300327249 /* DataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,14 +221,16 @@
 			children = (
 				5321E92B1D2EEC2B00327249 /* PlaylistsViewController.h */,
 				5321E92C1D2EEC2B00327249 /* PlaylistsViewController.m */,
+				5321E93D1D2EF0CA00327249 /* AddPlaylistViewController.h */,
+				5321E93E1D2EF0CA00327249 /* AddPlaylistViewController.m */,
 				5321E92D1D2EEC2B00327249 /* SongsViewController.h */,
 				5321E92E1D2EEC2B00327249 /* SongsViewController.m */,
 				5321E93A1D2EF0B600327249 /* AddSongViewController.h */,
 				5321E93B1D2EF0B600327249 /* AddSongViewController.m */,
-				5321E93D1D2EF0CA00327249 /* AddPlaylistViewController.h */,
-				5321E93E1D2EF0CA00327249 /* AddPlaylistViewController.m */,
 				5321E9AE1D2F0E8700327249 /* CoverPickerViewController.h */,
 				5321E9AF1D2F0E8700327249 /* CoverPickerViewController.m */,
+				5321E9FE1D2F598300327249 /* DataBaseManager.h */,
+				5321E9FF1D2F598300327249 /* DataBaseManager.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -227,11 +238,15 @@
 		5321E91D1D2EEBDA00327249 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5321E9CC1D2F591B00327249 /* SongModel+CoreDataProperties.h */,
+				5321E9CD1D2F591B00327249 /* SongModel+CoreDataProperties.m */,
+				5321E9CE1D2F591B00327249 /* SongModel.h */,
+				5321E9CF1D2F591B00327249 /* SongModel.m */,
+				5321E9D01D2F591B00327249 /* PlaylistModel+CoreDataProperties.h */,
+				5321E9D11D2F591B00327249 /* PlaylistModel+CoreDataProperties.m */,
+				5321E9D21D2F591B00327249 /* PlaylistModel.h */,
+				5321E9D31D2F591B00327249 /* PlaylistModel.m */,
 				5321E9371D2EEF1100327249 /* Task_Core_Data.xcdatamodeld */,
-				5321E9431D2F04B200327249 /* PlaylistModel.h */,
-				5321E9441D2F04B200327249 /* PlaylistModel.m */,
-				5321E9461D2F04BA00327249 /* SongModel.h */,
-				5321E9471D2F04BA00327249 /* SongModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -437,19 +452,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5321E9D41D2F591B00327249 /* SongModel+CoreDataProperties.m in Sources */,
 				5321E9011D2EE7A400327249 /* AppDelegate.m in Sources */,
 				5321E9B01D2F0E8700327249 /* CoverPickerViewController.m in Sources */,
+				5321E9D61D2F591B00327249 /* PlaylistModel+CoreDataProperties.m in Sources */,
 				5321E93C1D2EF0B600327249 /* AddSongViewController.m in Sources */,
 				5321E8FE1D2EE7A400327249 /* main.m in Sources */,
-				5321E9481D2F04BA00327249 /* SongModel.m in Sources */,
 				5321E9391D2EEF1100327249 /* Task_Core_Data.xcdatamodeld in Sources */,
 				5321E92F1D2EEC2B00327249 /* PlaylistsViewController.m in Sources */,
 				5321E9361D2EEC6F00327249 /* PlaylistCell.m in Sources */,
 				5321E9301D2EEC2B00327249 /* SongsViewController.m in Sources */,
-				5321E9451D2F04B200327249 /* PlaylistModel.m in Sources */,
 				5321E9331D2EEC5500327249 /* SongCell.m in Sources */,
 				5321E93F1D2EF0CA00327249 /* AddPlaylistViewController.m in Sources */,
+				5321EA001D2F598300327249 /* DataBaseManager.m in Sources */,
+				5321E9D71D2F591B00327249 /* PlaylistModel.m in Sources */,
 				5321E9B31D2F0FA000327249 /* CoverCell.m in Sources */,
+				5321E9D51D2F591B00327249 /* SongModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

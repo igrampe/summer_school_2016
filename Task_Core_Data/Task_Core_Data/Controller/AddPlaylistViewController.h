@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class DataBaseManager;
+
 @interface AddPlaylistViewController : UIViewController
+
+@property (nonatomic, strong) DataBaseManager *dataBaseManager;
 
 @end

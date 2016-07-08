@@ -7,6 +7,7 @@
 //
 
 #import "AddSongViewController.h"
+#import "DataBaseManager.h"
 
 @interface AddSongViewController ()
 
@@ -30,7 +31,7 @@
 #pragma mark - Logic
 
 - (void)save {
-    
+    [self.dataBaseManager addSongWithTitle:self.titleField.text artistName:self.artistNameField.text toPlaylist:self.playlist];
 }
 
 @end

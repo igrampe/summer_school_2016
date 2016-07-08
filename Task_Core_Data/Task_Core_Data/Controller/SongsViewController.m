@@ -9,6 +9,8 @@
 #import "SongsViewController.h"
 #import "SongCell.h"
 #import "PlaylistModel.h"
+#import "AddSongViewController.h"
+#import "DataBaseManager.h"
 
 @interface SongsViewController ()
 
@@ -18,12 +20,23 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self reloadData];
     [self.tableView reloadData];
 }
 
 - (IBAction)unwind:(UIStoryboardSegue *)sender {
     
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UIViewController *destinationVC = segue.destinationViewController;
+    if ([segue.destinationViewController isKindOfClass:[UINavigationController class]]) {
+        destinationVC = ((UINavigationController *)segue.destinationViewController).topViewController;
+    }
+    if ([destinationVC isKindOfClass:[AddSongViewController class]]) {
+        AddSongViewController *addSongVC = (AddSongViewController *)destinationVC;
+        addSongVC.playlist = self.playlist;
+        addSongVC.dataBaseManager = self.dataBaseManager;
+    }
 }
 
 #pragma mark - UITableViewDataSource
@@ -65,12 +78,8 @@
 
 #pragma mark - Logic
 
-- (void)reloadData {
-    
-}
-
 - (void)deleteSongAtIndex:(NSInteger)index {
-    
+    [self.dataBaseManager deleteSong:self.playlist.songs.allObjects[index]];
 }
 
 @end

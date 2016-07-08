@@ -68,10 +68,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="dataBaseManager" destination="VIl-gV-zbQ" id="iBR-15-I9N"/>
                         <outlet property="editButtonItem" destination="rrJ-H5-k85" id="a0I-rh-3QY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azt-rI-kOk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="VIl-gV-zbQ" customClass="DataBaseManager"/>
             </objects>
             <point key="canvasLocation" x="1107" y="363"/>
         </scene>

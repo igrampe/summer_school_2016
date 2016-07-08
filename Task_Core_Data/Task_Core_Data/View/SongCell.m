@@ -7,6 +7,7 @@
 //
 
 #import "SongCell.h"
+#import "SongModel.h"
 
 @interface SongCell ()
 
@@ -18,7 +19,8 @@
 @implementation SongCell
 
 - (void)configureWithSong:(SongModel *)song {
-    
+    self.titleLabel.text = song.title;
+    self.artistLabel.text = song.artistName;
 }
 
 @end

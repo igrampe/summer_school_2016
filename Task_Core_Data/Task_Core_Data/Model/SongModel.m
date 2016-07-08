@@ -7,7 +7,10 @@
 //
 
 #import "SongModel.h"
+#import "PlaylistModel.h"
 
 @implementation SongModel
+
+// Insert code here to add functionality to your managed object subclass
 
 @end

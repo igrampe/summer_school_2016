@@ -10,3 +10,5 @@
   * Task_3
 4. GCD и многопоточность
   * Task_4
+5. Core Data
+  * Task_Core_Data

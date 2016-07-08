@@ -8,3 +8,5 @@
   * Task_2
 3. UIKit
   * Task_3
+4. GCD и многопоточность
+  * Task_4
